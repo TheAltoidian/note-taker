@@ -11,8 +11,8 @@ app.use(express.urlencoded({ extended: true }));
 
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', htmlRoutes);
+app.use('/api', noteRoutes);
 
-app.use('/', noteRoutes);
+app.use('/', htmlRoutes);
 
 app.listen(PORT, () => console.log('Now listening'));
